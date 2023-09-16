@@ -1,0 +1,139 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.65;
+    background-color: #f5f2f7;
+    background-color: #c7e2bb;
+    color: #29344B;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.smol-centering {
+    display: grid;
+    place-content: center;
+}
+
+.smol-sidebar {
+    display: grid;
+    grid-template-columns: fit-content(20ch) minmax(min(50vw, 30ch), 1fr);
+}
+
+.smol-flexbox-grid {
+    --min: 10ch;
+    --gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.smol-flexbox-grid>* {
+    flex: 1 1 var(--min);
+}
+
+.smol-flexbox-grid-2 {
+    --min: 10ch;
+    --gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.smol-flexbox-grid-2>* {
+    flex: 1 1 var(--min);
+}
+
+.smol-aspect-ratio-gallery {
+    --min: 15rem;
+    --aspect-ratio: 4/3;
+    --gap: 0;
+}
+
+.smol-aspect-ratio-gallery li {
+    height: max(25vh, 15rem);
+}
+
+@supports (aspect-ratio: 1) {
+    .smol-aspect-ratio-gallery li {
+        aspect-ratio: var(--aspect-ratio);
+        height: auto;
+    }
+}
+
+.smol-aspect-ratio-gallery img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Additional demo styles from SmolCSS.dev
+   Not all styles may be needed for this pen */
+ul {
+    list-style: none;
+    margin: 0;
+
+    &:not([data-padding-unset]) {
+        padding: 0;
+    }
+}
+
+#steam {
+    margin-top: 2em;
+    width: 10em;
+}
+
+#socials a {
+    display: inline;
+    width: 1em;
+    padding: 1.2em;
+    padding-top: 4em;
+}
+
+#logo img {
+    width: 20em;
+}
+
+#ultramassive {
+    background-color: #464E47;
+}
+
+#test {
+    background-color: #0b0b0b;
+    color: #f2f2f2;
+    padding: 2em 4em 4em 4em;
+}
+
+#test h2 {
+    font-size: 3em;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+#test span {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.1em;
+}
+
+#header {
+    background-color: #c7e2bb;
+    padding: 70px;
+}

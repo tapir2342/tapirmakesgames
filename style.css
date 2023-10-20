@@ -1,11 +1,9 @@
-/* Box sizing rules */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -15,7 +13,6 @@ p {
     margin: 0;
 }
 
-/* Set core body defaults */
 body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
@@ -104,8 +101,12 @@ body {
     height: 100%;
 }
 
-/* Additional demo styles from SmolCSS.dev
-   Not all styles may be needed for this pen */
+/*
+body {
+    background-color: #0b0b0b;
+}
+*/
+
 ul {
     list-style: none;
     margin: 0;
@@ -129,15 +130,15 @@ a:hover {
     width: 10em;
 }
 
-#socials a {
-    display: inline;
-    width: 1em;
-    padding: 1.2em;
-    padding-top: 4em;
+#logo img {
+    width: 10em;
 }
 
-#logo img {
-    width: 20em;
+#socials a {
+    display: inline;
+    width: 0.5em;
+    padding: 1.2em;
+    padding-top: 4em;
 }
 
 #ultramassive {
